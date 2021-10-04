@@ -1,0 +1,11 @@
+{
+  "name": "finance-api",
+  "version": "0.0.0",
+  "description": "My app for finance purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Jonatan Silva",
+  "license": "ISC"
+}
