@@ -4,5 +4,7 @@ const path = require('path')
 dotenv.config({ path: path.join(__dirname, '../../.env')})
 
 module.exports = {
-    port: process.env.PORT
+    port: process.env.PORT,
+    mongo_uri: process.env.MONGO_URI,
+    db_uri: process.env.DB_URI
 }

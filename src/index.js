@@ -1,10 +1,13 @@
-const envs = require('./config/config')
-const express = require('express');
-const app = express();
+const sequelize = require('./config/sequelize')
+const env = require('./config/env')
+const app = require('./app')
 
-// respond with "hello world" when a GET request is made to the homepage
-
-
-app.listen(envs.port, () => {
-  console.log(`The server is online on port: ${envs.port}`)
+app.listen(env.port, async () => {
+  try {
+    await sequelize.authenticate()
+  
+    console.log(`The server is online on port: ${env.port}`)
+  } catch (error) {
+    console.error('Unable to connect to the database:', error)
+  }  
 })
