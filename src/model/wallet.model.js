@@ -15,6 +15,6 @@ Wallet.init({
   modelName: 'Wallet'
 })
 
-Wallet.Profile = Wallet.hasOne(Profile, { foreignKey: 'walletId' })
+Wallet.Profile = Wallet.belongsTo(Profile, { foreignKey: 'profileId' })
 
 module.exports = Wallet

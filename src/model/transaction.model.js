@@ -12,9 +12,10 @@ Transaction.init({
 }, {
   sequelize,
   createdAt: true,
+  updatedAt: false,
   modelName: 'Transaction'
 })
 
-Transaction.Wallet = Transaction.belongsTo(Wallet, {foreignKey: 'walletId'})
+Transaction.Wallet = Transaction.belongsTo(Wallet, { foreignKey: 'walletId' })
 
 module.exports = Transaction
