@@ -11,7 +11,9 @@ Profile.init({
 }, {
   sequelize,
   timestamps: true,
-  modelName: 'Profile'
+  modelName: 'Profile',
 })
+
+Profile.hasOne(Wallet, {foreignKey: {name: 'profileId', allowNull: false}})
 
 module.exports = Profile

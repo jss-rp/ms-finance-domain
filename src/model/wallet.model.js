@@ -1,12 +1,13 @@
 const { DataTypes, Model } = require('sequelize');
-const Profile = require('../model/profile.model')
 const sequelize = require('../config/sequelize')
+const Transaction = require('./transaction.model')
 
 class Wallet extends Model {}
 
 Wallet.init({
   amount: {
     type: DataTypes.DOUBLE,
+    defaultValue: 0,
     allowNull: false
   }
 }, {
@@ -15,6 +16,6 @@ Wallet.init({
   modelName: 'Wallet'
 })
 
-Wallet.Profile = Wallet.belongsTo(Profile, { foreignKey: 'profileId' })
+Wallet.hasMany(Transaction, { foreignKey: { name: 'walletId', allowNull: false } })
 
 module.exports = Wallet
