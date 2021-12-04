@@ -18,7 +18,7 @@ exports.read = async (req, res, next) => {
 }
 
 exports.listAll = async (req, res) => {
-  let transactions = await TransactionRepository.listAll(req.params.walletId)
+  let transactions = await TransactionRepository.listAll(req.params.id)
 
   return res.status(200).send(transactions)
 }
