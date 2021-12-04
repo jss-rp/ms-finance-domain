@@ -12,6 +12,12 @@ exports.read = async (req, res) => {
   return res.status(200).send(wallet)
 }
 
+exports.update = async (req, res) => {
+  let wallet = await WalletRepository.update(req.body)
+
+  return res.status(200).send(wallet)
+}
+
 exports.listAll = async (req, res) => {
   let wallets = await WalletRepository.listAll()
 
