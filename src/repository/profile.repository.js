@@ -1,4 +1,4 @@
-const Profile = require('../model/profile.model')
+const { Profile } = require('../model')
 
 exports.create = async (profile) => await Profile.create(profile)
 

@@ -1,4 +1,4 @@
-const Transaction = require('../model/transaction.model')
+const { Transaction } = require('../model')
 const WalletRepository = require('./wallet.repository')
 
 exports.create = async (transaction) => {

@@ -1,4 +1,4 @@
-const Wallet = require('../model/wallet.model')
+const { Wallet } = require('../model')
 
 exports.create = async (wallet) => await Wallet.create(wallet)
 
