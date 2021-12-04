@@ -1,6 +1,9 @@
 const express = require('express')
-const WalletController = require('../controller/wallet.controller')
-const TransactionController = require('../controller/transaction.controller')
+
+const {
+  WalletController,
+  TransactionController
+} = require('../controller')
 
 const router = express.Router()
 
