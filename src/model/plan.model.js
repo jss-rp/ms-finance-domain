@@ -1,4 +1,5 @@
 const { DataTypes, Model } = require('sequelize')
+const Desire = require('./desire.model')
 const sequelize = require('../config/sequelize')
 
 class Plan extends Model {}
@@ -10,7 +11,11 @@ Plan.init({
   loss: { type: DataTypes.DOUBLE }
 }, {
   sequelize,
+  createdAt: true,
+  updatedAt: false,
   modelName: 'Plan'
 })
+
+Plan.hasMany(Desire, {foreignKey: {name: 'planId', allowNull: false}})
 
 module.exports = Plan
