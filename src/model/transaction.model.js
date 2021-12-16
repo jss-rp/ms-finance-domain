@@ -8,7 +8,21 @@ Transaction.init({
     type: DataTypes.DOUBLE,
     allowNull: false
   },
-}, {  
+  incoming: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false
+  },
+  predicted: {
+    type: DataTypes.DOUBLE,
+  },
+  base: {
+    type: DataTypes.DOUBLE,
+  },
+  launchedAt: {
+    type: DataTypes.DATE
+  },
+},
+{  
   sequelize,
   createdAt: true,
   updatedAt: false,

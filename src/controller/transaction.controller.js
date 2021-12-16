@@ -1,8 +1,9 @@
 const { TransactionRepository } = require('../repository')
+const { TransactionService } = require('../service')
 
 exports.create = async (req, res) => {
   try {
-    let transaction = await TransactionRepository.create(req.body)
+    let transaction = await TransactionService.add(req.body)
 
     return res.status(201).send(transaction)
   } catch(err) {

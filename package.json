@@ -4,7 +4,7 @@
   "description": "My app for finance purpose",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node --trace-warnings src/index.js",
     "test": "nodemon src/index.js"
   },
   "author": "Jonatan Silva",
