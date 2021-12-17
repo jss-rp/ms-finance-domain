@@ -1,14 +1,5 @@
-const pino = require('pino')
+const swagger = require('./swagger')
 
-const logger = pino({
-  transport: {
-    target: 'pino-pretty',
-    options: {
-      colorize: true,
-      translateTime: 'yyyy-mm-dd HH:MM:ss',
-      timestampKey: 'time',
-    }
-  }
-})
-
-module.exports = logger 
+module.exports = {
+  swagger
+}

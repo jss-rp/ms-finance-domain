@@ -1,6 +1,9 @@
 const sequelize = require('./config/sequelize')
+const { swagger } = require('./config')
 const env = require('./config/env')
 const app = require('./app')
+
+swagger(app)
 
 app.listen(env.port, async () => {
   try {
