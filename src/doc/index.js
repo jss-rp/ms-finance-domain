@@ -19,7 +19,7 @@
  */
 
 /**
- * POST /profile
+ * POST /api/profile
  * @tags Profile
  * @summary Cria um perfil
  * @param {Profile} request.body.required - Perfil a ser criado
@@ -33,7 +33,7 @@
  */
 
 /**
- * GET /profile/{id}
+ * GET /api/profile/{id}
  * @tags Profile
  * @summary Busca perfil por Id
  * @param {number} id.path.required - Id do perfil
@@ -41,7 +41,7 @@
  */
 
 /**
- * POST /wallet
+ * POST /api/wallet
  * @tags Wallet
  * @summary Cria uma carteira
  * @param {Wallet} request.body.required - Carteira a ser criada
@@ -54,7 +54,7 @@
  */
 
 /**
- * GET /wallet/{id}
+ * GET /api/wallet/{id}
  * @tags Wallet
  * @summary Busca carteira por Id
  * @param {number} id.path.required - Id da carteira
@@ -63,7 +63,7 @@
 
 
 /**
- * POST /transaction
+ * POST /api/transaction
  * @tags Transaction
  * @summary Cria uma transação
  * @param {Transaction} request.body.required - Transação a ser criada

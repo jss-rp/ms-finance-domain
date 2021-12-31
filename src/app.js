@@ -5,7 +5,7 @@ const app = express()
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-app.use('/finance-api', routes)
+app.use('/api', routes)
 
 
 module.exports = app
