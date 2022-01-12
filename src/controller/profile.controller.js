@@ -11,3 +11,9 @@ exports.listAll = async (req, res) => {
 
   return res.status(200).send(profiles)
 }
+
+exports.read = async (req, res) => {
+  let profile = await ProfileRepository.read(req.params.id)
+
+  return res.status(200).send(profile)
+}

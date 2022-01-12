@@ -8,4 +8,8 @@ router
   .post(controller.create)
   .get(controller.listAll)
 
+router
+  .route('/:id')
+  .get(controller.read)
+
 module.exports = router
