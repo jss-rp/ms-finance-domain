@@ -5,8 +5,7 @@ const sequelize = require('../config/sequelize')
 class Tag extends Model {}
 
 Tag.init({
-  name: { type: DataTypes.STRING, unique: true },
-  description: { type: DataTypes.STRING, unique: true }
+  name: { type: DataTypes.STRING, unique: true }
 }, {
   sequelize,
   createdAt: true,
