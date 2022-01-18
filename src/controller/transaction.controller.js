@@ -1,9 +1,8 @@
 const { TransactionRepository } = require('../repository')
-const { TransactionService } = require('../service')
 
 exports.create = async (req, res) => {
   try {
-    let transaction = await TransactionService.add(req.body)
+    let transaction = await TransactionRepository.create(req.body)
 
     return res.status(201).send(transaction)
   } catch(err) {
@@ -12,14 +11,14 @@ exports.create = async (req, res) => {
   }
 }
 
-exports.read = async (req, res, next) => {
+exports.read = async (req, res) => {
   let transaction = await TransactionRepository.read(req.params.id)
 
   return res.status(200).send(transaction)
 }
 
-exports.listAll = async (req, res) => {
-  let transactions = await TransactionRepository.listAll(req.params.id)
+exports.listAll = async (_, res) => {
+  let transactions = await TransactionRepository.listAll()
 
   return res.status(200).send(transactions)
 }
