@@ -1,5 +1,6 @@
 const { DataTypes, Model } = require('sequelize')
 const sequelize = require('../config/sequelize')
+const Transaction = require('./transaction.model')
 
 class Card extends Model {}
 
@@ -13,6 +14,6 @@ Card.init({
   modelName: 'Card'
 })
 
-Card.hasMany(Card, {foreignKey: {name: 'cardId', allowNull: true}})
+Card.hasMany(Transaction, {foreignKey: {name: 'cardId', allowNull: true}})
 
 module.exports = Card
