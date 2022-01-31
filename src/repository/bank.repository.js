@@ -1,4 +1,4 @@
-const { Bank } = require('../model/bank.model')
+const { Bank } = require('../model')
 
 exports.create = async (bank) => await Bank.create(bank)
 
