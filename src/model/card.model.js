@@ -6,7 +6,8 @@ class Card extends Model {}
 
 Card.init({
   code: { type: DataTypes.STRING },
-  dueAt: { type: DataTypes.DATEONLY }
+  dueAt: { type: DataTypes.DATEONLY },
+  active: { type: DataTypes.BOOLEAN }
 }, {
   sequelize,
   createdAt: true,
