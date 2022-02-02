@@ -12,8 +12,7 @@ exports.read = async (req, res) => {
   request.simple(res, async () => {
     const card = await CardRepository.read(req.params.id)
 
-    if(!card)
-      return res.status(404).send()
+    if(!card) return res.status(404).send()
     
     return res.status(200).send(card)
   })
@@ -21,8 +20,10 @@ exports.read = async (req, res) => {
 
 exports.readByBank = async (req, res) => {
   request.simple(res, async () => {
-    const card = await CardRepository.readByBank(req.params.id)
-
+    const cards = await CardRepository.readByBank(req.params.id)
+    
+    if(cards.length === 0) return res.status(204).send()
+    
     return res.status(201).send(card)
   })
 }
@@ -30,6 +31,8 @@ exports.readByBank = async (req, res) => {
 exports.readAll = async (_, res) => {
   request.simple(res, async () => {
     const cards = await CardRepository.readAll()
+
+    if(cards.length === 0) return res.status(204).send()
 
     return res.status(200).send(cards)
   })
