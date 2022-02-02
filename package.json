@@ -1,7 +1,7 @@
 {
-  "name": "finance-app-api",
+  "name": "ms-finance-domain",
   "version": "0.0.0",
-  "description": "My app for finance purpose",
+  "description": "API for finance domain acess",
   "main": "index.js",
   "scripts": {
     "start": "node --trace-warnings src/index.js",
